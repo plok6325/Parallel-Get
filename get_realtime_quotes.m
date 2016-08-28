@@ -13,4 +13,5 @@ end
 quotes_page=urlread(url);
 exp='var hq_str_s\S(?<code>\d{6})\W{2}(?<name>\w*\s*\w*)\,(?<open>\d*\.\d*)\,(?<pre_close>\d*\.\d*)\,(?<price>\d*\.\d*)\,(?<high>\d*\.\d*)\,(?<low>\d*\.\d*)\,\d*\.\d*\,\d*\.\d*\,(?<volumn>\d*)\,(?<amount>\d*)';
 df=regexp(quotes_page,exp,'names');
+df=struct2table(df);
 end
