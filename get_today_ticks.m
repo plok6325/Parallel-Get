@@ -16,5 +16,6 @@ today_tick=[today_tick this_page_tick];
 display([num2str(100*pNo/str2num(last_page(6:end))),'%'])
 end
 today_tick=struct2table(today_tick);
+% today_tick=sortrows(today_tick,'timestamp','descend')
 end
 
