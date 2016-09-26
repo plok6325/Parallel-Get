@@ -5,7 +5,7 @@ if iscell(code)
 for x=1:length (code)
     symbol{x}=code_to_symbol(code{x});
 end
-url=['http://hq.sinajs.cn/list=',strjoin(symbol,',')]
+url=['http://hq.sinajs.cn/list=',strjoin(symbol,',')];
 else
      symbol =code_to_symbol(code);
     url=['http://hq.sinajs.cn/list=',symbol];
