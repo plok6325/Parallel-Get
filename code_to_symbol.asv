@@ -1,0 +1,33 @@
+function [ code ] = code_to_symbol( code )
+%user input code to actual code 
+if ischar(code)
+    if code=='hs300'
+        code = 'sz399300';
+    elseif code=='sh'
+        code ='sh000001'
+    elseif code == 'sz'
+            code = 'sz399001'
+    elseif code =='sz50'
+        code ='sh000016'
+    elseif code == 'zxb'
+        code ='sz399005'
+    else if code=='cyb'
+            code ='sz399006'
+        elseif code =='zx300'
+            code ='sz399008'
+        elseif 'zh500':'sh000905'}
+    end 
+else
+    code=num2str(code);
+    while length(code)<6
+        code=['0',code];
+    end
+end
+if code(1)=='6'||code(1)=='5'||code(1)=='9'
+    code=['sh',code];
+elseif code(1)=='3'||code(1)=='0'
+    code=['sz',code];
+end
+
+end
+
