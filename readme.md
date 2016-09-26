@@ -15,6 +15,7 @@ API 详解
 ====
 **get_tick_data（code，date）**
 获取个股以往某日历史的分笔数据明细。
+示例1：
 >\>\>get_tick_data('000002','2016-08-26')
 >
     timestamp      price     change     volumns    amount  
@@ -29,6 +30,7 @@ API 详解
 
 **get_hist_data(code)** 可以通过参数设置获取日k线、周k线、月k线，以及5分钟、15分钟、30分钟和60分钟k线数据。
 获取单只股票日线数据
+示例1：
 >\>\>get_hist_data(000002,'d')
 >
       date           open         high        close        low         volumne         p_change
@@ -39,6 +41,7 @@ API 详解
     '2016-08-26'    '23.590'    '23.590'    '22.890'    '22.880'    '1200024.12'     '-0.650'
 
 **get_today_tick(code)**  获取单只股票今日tick数据（大约3s 更新一次）
+示例1：
 >\>\>get_today_tick(000002)
 >
     timestamp      price
@@ -61,7 +64,9 @@ API 详解
         '2016-09-26 13:45:00'    '37.76'    '37.8'     '37.78'    '37.52'    '3223.01'    '0.02'  
         '2016-09-26 13:30:00'    '37.95'    '37.97'    '37.77'    '37.75'    '1571'       '-0.18'
         '2016-09-26 13:15:00'    '37.88'    '37.95'    '37.95'    '37.68'    '1447'       '0.07'  
+
 **get_realtime_quotes(code)** 获取多只股票当前时间的成交情况
+示例1：
 >\>\>get_realtime_quotes({'000002','000025'})
 >
     code       name          open      pre_close     price        high        low         volumn          amount   
