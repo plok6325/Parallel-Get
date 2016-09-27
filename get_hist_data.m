@@ -10,7 +10,7 @@ if length(ktype)==1
         page=urlread(['http://api.finance.ifeng.com/akdaily/?code=',symbol,'&type=last']);
     end
     
-    exp='(?<date>\d{4}\-\d{2}\-\d{2})\","(?<open>\d*\.\d*|\d*)\","(?<high>\d*\.\d*|\d*)\","(?<close>\d*\.\d*|\d*)\","(?<low>\d*\.\d*|\d*)\","(?<volumne>\d*\.\d*|\d*)\,"(?<p_change>\S{1,7})\"';
+    exp='(?<date>\d{4}\-\d{2}\-\d{2})\","(?<open>\d*\.\d*|\d*)\","(?<high>\d*\.\d*|\d*)\","(?<close>\d*\.\d*|\d*)\","(?<low>\d*\.\d*|\d*)\","(?<volumne>\d*\.\d*|\d*)\","(?<p_change>\S{1,7})\"';
     df=regexp(page,exp,'names');
     df=struct2table(df);
     df=sortrows(df,'date','descend');
