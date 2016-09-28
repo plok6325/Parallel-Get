@@ -26,7 +26,7 @@ else %∆’Õ®
 end
 if code(1)=='6'||code(1)=='5'||code(1)=='9'
     code=['sh',code];
-elseif code(1)=='3'||code(1)=='0'
+else 
     code=['sz',code];
 end
 
