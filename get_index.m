@@ -8,4 +8,3 @@ web=urlread('http://hq.sinajs.cn/rn=xppzh&list=sh000001,sh000002,sh000003,sh0000
  df=[df df2];
 df=struct2table(df);
 end
-
