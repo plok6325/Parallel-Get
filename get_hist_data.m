@@ -1,4 +1,4 @@
-function [ df ] = get_hist_data( code,ktype)
+function [ df ] = get_hist_data( code,ktype)    
 %获取全部历史数据
 symbol=code_to_symbol(code);
 if length(ktype)==1
